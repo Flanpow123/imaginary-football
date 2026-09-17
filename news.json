@@ -7,7 +7,7 @@
       "takes": [
         {
           "analyst": "analyst",
-          "text": "Tokyo Swift owns the result of record: first in scoring, first in all-play and an actual win to match. The only responsible caveat is that its Week 2 best-lineup projection falls to 130.5. Dominance is established. Repeatability is not."
+          "text": "First in scoring, first in all-play, and a win to go with it. That is the whole resume and Cody earned every line of it. But I have been on teams that hung forty in September and spent October explaining it. The Week 2 projection says 130.5. That is the number that tells you who somebody is."
         },
         {
           "analyst": "firestarter",
@@ -49,7 +49,7 @@
         },
         {
           "analyst": "analyst",
-          "text": "The important distinction is flexibility. David paid $20 for a contested target and kept $80. Tyler used 30% of the budget on two uncontested $15 wins. The players will decide the verdict, but those are very different processes."
+          "text": "David paid $20 for the one man four teams wanted and still walked away with $80 in his pocket. Tyler spent thirty percent of his budget on two guys nobody was bidding against. I have watched front offices do both. Only one of them is still answering the phone in December."
         },
         {
           "analyst": "wildcard",
@@ -83,7 +83,7 @@
       "takes": [
         {
           "analyst": "analyst",
-          "text": "The structural point survives Week 1: every comparison using public quarterback projections carries the same scoring-format problem. We should be cautious about precise team totals until the adjustment is explicit."
+          "text": "Every quarterback number anybody quotes in this league is built on a four-point touchdown, and this league pays six. I am not a numbers man. I do not have to be. When the ruler is wrong you stop arguing about the inches."
         },
         {
           "analyst": "quant",
@@ -92,33 +92,6 @@
         {
           "analyst": "troll",
           "text": "The quarterback projections are wrong, everybody knows why they are wrong, and six managers will still cite them after losing. We have invented a spreadsheet-shaped horoscope."
-        }
-      ],
-      "storyline": "Does the six-point passing touchdown actually reshape quarterback value in this league, or does everyone keep drafting and starting as if it pays four?"
-    },
-    {
-      "headline": "The desk opens, and nobody asked for it",
-      "body": "Imaginary Football has been running without coverage. That ends now, over the objections of roughly everyone in it.\n\nFive people have been assigned to this league. None of them chose it. Standings, waiver bids, trades and lineup decisions all arrive here straight from Sleeper and update on their own, which means the numbers on this page are not up for debate. What the numbers mean is the only thing anybody here is allowed to argue about, and they will.\n\nEvery ballot filed in the poll is kept permanently and scored against what actually happens. Nobody on this desk can quietly walk a take back. That was not their idea either.",
-      "takes": [
-        {
-          "analyst": "analyst",
-          "text": "Twelve teams, full PPR, two flex spots, six-point passing touchdowns. That last one matters more than anyone in this league has accounted for yet, and I expect to spend most of the season pointing at it."
-        },
-        {
-          "analyst": "firestarter",
-          "text": "I have read the rosters. I have picked my guy. I am not saying who it is yet because I want him relaxed."
-        },
-        {
-          "analyst": "quant",
-          "text": "Before anyone quotes a projection at me: the league pays six for a passing touchdown and the public numbers assume four. Every quarterback in this league is being undersold by three to four points a week. I have adjusted. Nobody else has."
-        },
-        {
-          "analyst": "troll",
-          "text": "Three of you did not set a team name. You are managing a fantasy roster under your own username like a man signing a birthday card with his full legal name."
-        },
-        {
-          "analyst": "wildcard",
-          "text": "Here is what nobody is ready for. The teams that lost in week one are now playing with nothing to lose, which is the strongest position in fantasy football. I would rather be 0-1 with the schedule ahead of me than 1-0 carrying that weight. Write it down."
         }
       ],
       "storyline": "Does the six-point passing touchdown actually reshape quarterback value in this league, or does everyone keep drafting and starting as if it pays four?"
@@ -142,7 +115,7 @@
           "Bakers Dozen",
           "Kool-Aid Man"
         ],
-        "comment": "The first four have earned separation. I moved littlescot229 ahead of two Week 1 winners because the roster carries the best Week 2 projection and an 80% playoff estimate, but Tokyo Swift remains the only defensible number one."
+        "comment": "The top four separated themselves and everybody in this league knows it. I put littlescot229 over two teams that actually won, because that roster owns the best Week 2 projection and an 80% playoff number, and I would rather bet on the room than the result. Tokyo Swift at one is not a debate."
       },
       {
         "analyst": "firestarter",
@@ -216,6 +189,8 @@
         ],
         "comment": "Week 2 has already replaced Week 1; the games simply have not admitted it yet. Littlescot229 and Bakers Dozen own the two biggest matchup projections, so they own my ballot. Tokyo Swift spent all 199.76 at once."
       }
-    ]
-  }
+    ],
+    "title": "Week 2 desk ballots"
+  },
+  "week": 2
 }
