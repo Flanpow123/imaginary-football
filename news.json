@@ -1,100 +1,117 @@
 {
-  "generated": "2026-09-17",
+  "generated": "2026-09-18",
+  "week": 2,
   "stories": [
     {
-      "headline": "Tokyo Swift did not win Week 1. It annexed it.",
-      "body": "F&F: Tokyo Swift opened the season with 199.76 points, an 11-0 all-play record and a 101.50-point demolition of Kool-Aid Man. It was the highest score in the league by 21.94 points, and the lineup was only 94% efficient. That is the cleanest opening statement on the board.\n\nThe first tier is already visible behind it. I HURT MY NABERS scored 177.82 with a perfect lineup, while Team Carlzyn put up 167.96 despite operating at 87% efficiency. One week is not a season, but one week was enough to make the rest of the league start negotiating with the evidence.",
-      "takes": [
-        {
-          "analyst": "analyst",
-          "text": "First in scoring, first in all-play, and a win to go with it. That is the whole resume and Cody earned every line of it. But I have been on teams that hung forty in September and spent October explaining it. The Week 2 projection says 130.5. That is the number that tells you who somebody is."
-        },
-        {
-          "analyst": "firestarter",
-          "text": "Cody scored 199.76 and somehow the interesting team is still Chase. I HURT MY NABERS started the exact right lineup, scored 177.82 and now gets Carlzyn. Win that one and I will say what everybody else is afraid to say."
-        },
-        {
-          "analyst": "troll",
-          "text": "Kool-Aid Man lost by 101.50 points. That is not a matchup result. That is a before-and-after photo."
-        }
-      ],
-      "storyline": "Can Tokyo Swift turn the league's loudest Week 1 into a weekly advantage, or was 199.76 the opening-week ceiling?"
-    },
-    {
-      "headline": "Carlzyn left 82.3 on the bench and still won by 67.4",
-      "body": "Team Carlzyn had the league's largest bench total at 82.3 points, including 31.2 from Tyler Shough, and still beat Bakers Dozen 167.96 to 100.56. The lineup captured only 87% of the best score available, but the margin made the mistakes decorative.\n\nThe same indulgence was not available everywhere. Kool-Aid Man posted the league's worst lineup efficiency at 75%, leaving 33.1 points outside the best available lineup in a week it scored 98.26. Hunter I hardly know her! left 20.5 points outside the best lineup and lost by 8.12. One manager had enough roster to survive the wrong answers. The others simply had wrong answers.",
+      "headline": "Josh Allen scored 46.82 and the argument stopped being theoretical",
+      "body": "Josh Allen was projected for 25.3 points on Thursday night and scored 46.82. Jared Goff was projected for 19.3 and scored 37.78. The two quarterbacks who played cleared their projections by a combined 40.0 points, which is not a rounding error and is not variance you shrug at.\n\nThe desk has spent two weeks saying the same thing: the public projections behind this page are built on a four-point passing touchdown, and this league pays six. Nobody had a result to point at. Now there are two, on the same night, from the only two quarterbacks who have played.\n\nThe beneficiaries are already on the board. Team Carlzyn sits on 46.72 almost entirely because of Allen — DJ Moore, projected 13.1, contributed minus 0.10. littlescot229 has 61.08 from Goff and Jahmyr Gibbs alone.",
       "takes": [
         {
           "analyst": "quant",
-          "text": "Bench points and lineup inefficiency are not interchangeable, which is why I care about the 25.6 points Carlzyn left outside its best lineup more than the raw 82.3 sitting on the bench. The alarming part for everyone else is that 167.96 was the inefficient version."
-        },
-        {
-          "analyst": "troll",
-          "text": "Mason scored 167.96 while misplacing a quarter-century of usable points. Bakers Dozen scored 100.56 at 97% efficiency. One manager needs lineup advice. The other needs players."
-        },
-        {
-          "analyst": "wildcard",
-          "text": "Perfect efficiency is a trap. Chase used every point correctly in Week 1, which means there is nowhere left to improve. Carlzyn has 25.6 points of untapped upside. I would rather have the mistakes."
-        }
-      ],
-      "storyline": "Is Carlzyn's inefficient 167.96 a warning that the roster has another gear, or the kind of weekly lineup puzzle that eventually costs a win?"
-    },
-    {
-      "headline": "$20 bought Vele. $30 bought Tyler a personality.",
-      "body": "David landed Devaughn Vele for $20, beating bids of $15 from I HURT MY NABERS and Return of the King and $10 from Dsteady1234. It was the only contested paid claim of the week, and it left davidbatista with $80 of FAAB.\n\nReturn of the King spent $15 each on Antonio Williams and Dontayvion Wicks, leaving $70. Tyler also submitted two $0 claims for Bryce Young, losing one and winning the other, which is either procedural sophistication or evidence that the waiver screen won. Meanwhile, Tokyo Swift responded to 199.76 points by making five Week 2 add-drop moves. Apparently comfort is for teams below 190.",
-      "takes": [
-        {
-          "analyst": "firestarter",
-          "text": "Tyler spent more than David and still let David take the only player four teams fought over. If Wicks and Antonio Williams are the master plan, I want it laminated so we can preserve the evidence."
+          "text": "Twenty-one and a half points over on Allen, eighteen and a half over on Goff. I have been saying three to four points a week per quarterback and I was conservative. Two data points is not proof. Two data points pointing the same direction on the same night, at the exact position I flagged, is not nothing either."
         },
         {
           "analyst": "analyst",
-          "text": "David paid $20 for the one man four teams wanted and still walked away with $80 in his pocket. Tyler spent thirty percent of his budget on two guys nobody was bidding against. I have watched front offices do both. Only one of them is still answering the phone in December."
-        },
-        {
-          "analyst": "wildcard",
-          "text": "The double Bryce Young claim was intentional. Tyler forced the system to reveal which Bryce Young wanted it more. He now has the motivated one."
-        }
-      ],
-      "storyline": "Will David's contested $20 bet on Devaughn Vele outperform Tyler's two $15 waiver additions?"
-    },
-    {
-      "headline": "Week 2 puts the first tier in the same room",
-      "body": "I HURT MY NABERS and Team Carlzyn meet after finishing second and third in Week 1 scoring. Carlzyn carries the slightly higher current projection, 136.1 to 131.3, while NABERS brings the league's only 100% efficient opening lineup. Somebody in the early top three is taking a loss.\n\nElsewhere, the projections are trying to move faster than the standings. Littlescot229 owns the highest current Week 2 projection at 138.8 after scoring 129.64 in Week 1. Bakers Dozen projects for 135.2 after a 100.56-point opener. Tokyo Swift, after nearly touching 200, is projected for 128.8 against Return of the King at 122.2. Every player in all six matchups is still to play, so these are forecasts, not alibis.",
-      "takes": [
-        {
-          "analyst": "quant",
-          "text": "The Carlzyn-NABERS spread is 4.8 points, which is functionally a coin flip in a league where the public quarterback projections are still built around four-point passing touchdowns. I do not trust the precision, but I trust the matchup."
+          "text": "I said when the ruler is wrong you stop arguing about the inches. Thursday night was the ruler being wrong in public. Mason did not out-coach anybody. He rostered a quarterback in a league that pays six and the rest of you were reading a number built for a league that pays four."
         },
         {
           "analyst": "firestarter",
-          "text": "Carlzyn had 82.3 on the bench and everybody decided that means depth. It can also mean Mason has too many ways to get cute. Chase already proved he can submit the right ten."
-        },
-        {
-          "analyst": "wildcard",
-          "text": "Bakers Dozen is scoring 135.2 this week because the projection says 135.2 and projections only become unreliable after kickoff. David should prepare accordingly."
-        }
-      ],
-      "storyline": "Does the Week 2 Carlzyn-NABERS matchup produce a genuine challenger to Tokyo Swift at the top?"
-    },
-    {
-      "headline": "The six-point quarterback argument has its first receipts",
-      "body": "The league pays six points for a passing touchdown, while the public projection set behind the briefing assumes four. That gap remains the desk's standing dispute with every clean-looking weekly total.\n\nThe first week did not settle the argument, but Week 2 gives it useful pressure points. Josh Allen is projected for 25.2 in Carlzyn's matchup with I HURT MY NABERS, Dak Prescott for 24.6 against Hunter I hardly know her!, and Brock Purdy for 24.0 against Tokyo Swift. If quarterback scoring is being systematically understated, the closest projected matchups are where the missing points should become hardest to ignore.",
-      "takes": [
-        {
-          "analyst": "analyst",
-          "text": "Every quarterback number anybody quotes in this league is built on a four-point touchdown, and this league pays six. I am not a numbers man. I do not have to be. When the ruler is wrong you stop arguing about the inches."
-        },
-        {
-          "analyst": "quant",
-          "text": "I said three to four points per quarterback per week, and nothing in the briefing has disproved it. The numbers are not neutral just because they arrive with a decimal."
+          "text": "Forty-six point eight two. From one man. On a Thursday. Mason Beebe is sitting on forty-six points and eight players still to go and I am supposed to believe this is a coin flip against Chase? Somebody call NABERS and tell him the coin landed."
         },
         {
           "analyst": "troll",
-          "text": "The quarterback projections are wrong, everybody knows why they are wrong, and six managers will still cite them after losing. We have invented a spreadsheet-shaped horoscope."
+          "text": "DJ Moore was projected for 13.1 and scored negative zero point one. That is a thirteen-point swing in the wrong direction and Carlzyn still leads by forty-six. Some men are born lucky and some men start Josh Allen."
+        },
+        {
+          "analyst": "wildcard",
+          "text": "Everybody is looking at Allen. Look at DJ Moore. Negative zero point one. That is a man who has bottomed out, and there is only one direction available to him now. Buy low. Write it down."
         }
       ],
       "storyline": "Does the six-point passing touchdown actually reshape quarterback value in this league, or does everyone keep drafting and starting as if it pays four?"
+    },
+    {
+      "headline": "Ian has 61.08 from two players and the week has barely started",
+      "body": "littlescot229 started Jared Goff and Jahmyr Gibbs on Thursday and got 61.08 out of the pair — 37.78 and 23.30. Kool-Aid Man has not scored a point, because Kool-Aid Man has not had a player take the field.\n\nThe arithmetic from here is unkind. Ian has eight starters left projected for 85.1. Jace has all ten of his, projected for 125.4, and needs 146.1 from them to overhaul a lead built before Sunday.\n\nIan was sixth in the standings and no higher than fourth on any ballot but one. He is currently winning by sixty-one.",
+      "takes": [
+        {
+          "analyst": "wildcard",
+          "text": "I had littlescot229 first on my ballot. First. Not fifth, not sixth, first, and the desk treated me like I had wandered in off the street. He is up sixty-one points. I would like that noted somewhere permanent."
+        },
+        {
+          "analyst": "quant",
+          "text": "A 61.08 lead with eight starters left is worth less than it looks and considerably more than zero. The honest framing is that Jace now needs 146.1 from a roster projected for 125.4. Not impossible. Just not the plan anybody drew up."
+        },
+        {
+          "analyst": "troll",
+          "text": "Kool-Aid Man has scored ninety-eight points in one and a half weeks of football. At some stage we stop calling it a slow start and start calling it the ceiling."
+        }
+      ],
+      "storyline": "Is littlescot229 a genuine top-six team the ballots underrated, or is a two-player Thursday about to be washed away on Sunday?"
+    },
+    {
+      "headline": "Cole left 22.50 on the bench before anybody else had kicked off",
+      "body": "Dalton Kincaid scored 22.50 on The Dak Pack's bench on Thursday night. Cole is starting Travis Kelce at tight end, projected for 10.6 and yet to play. James Cook delivered 20.90 from the starting lineup, so the week is not a disaster — The Dak Pack leads Hunter I hardly know her! 20.90 to nothing.\n\nIt is the second week running. Cole finished Week 1 at 83% lineup efficiency, eleventh of twelve, with 26.4 points left unstarted. He is now two for two on leaving a tight end's worth of production on the bench.\n\nAdam has his own small version of this, with Khalil Shakir posting 6.80 from the bench. It is a rounding error next to 22.50, but he trails by 20.90 and it would have covered a third of it.",
+      "takes": [
+        {
+          "analyst": "firestarter",
+          "text": "Twenty-two and a half points. On the bench. On a Thursday. Cole Hutchinson has now done this in consecutive weeks and I want somebody on that desk to explain to me how a man watches Kincaid go for twenty-two and still feels good about the tight end he submitted."
+        },
+        {
+          "analyst": "analyst",
+          "text": "I have been in those locker rooms when a coach guesses wrong and the whole building knows before halftime. Nobody says anything. You just see it on the sideline. Cole is fine this week — Cook covered him. But twice is a habit forming, and habits are what beat you in November."
+        },
+        {
+          "analyst": "quant",
+          "text": "Eighty-three percent efficiency in Week 1 and 22.5 already outside the lineup in Week 2. I will not call it a pattern off two data points, but I will say that the points a manager leaves unstarted are the only ones he fully controls."
+        }
+      ],
+      "storyline": "Is Cole's lineup management a genuine structural problem, or two unlucky tight end calls that happen to have landed in a row?"
+    },
+    {
+      "headline": "Six matchups, six Thursday leaders, and the desk goes on the record",
+      "body": "Every one of the six matchups is live and every one has a leader who got there before Sunday. Team Carlzyn leads I HURT MY NABERS 46.72 to nothing. F&F: Tokyo Swift leads Return of the King 35.20 to nothing, all of it from Amon-Ra St. Brown. The Dak Pack leads Hunter I hardly know her! 20.90 to nothing. Bakers Dozen leads davidbatista 17.20 to nothing on Sam LaPorta alone. Dsteady1234 leads Chop Wood, Carry Water 5.30 to nothing, which is the thinnest lead a man has ever had to defend.\n\nThe projections disagree with several of those leads. Chop Wood, Carry Water has all ten starters left at 133.3 against Darrien's nine at 118.7. davidbatista has ten left at 126.3 against Boesch's nine at 124.9. I HURT MY NABERS has ten left worth 132.6, and needs 144.4 of it.\n\nSo the desk is calling all six. On the record, before kickoff, scored on Monday like everything else here.",
+      "takes": [
+        {
+          "analyst": "analyst",
+          "text": "Carlzyn, Tokyo Swift, Chop Wood, davidbatista, littlescot229 and The Dak Pack. The one that will look strange is David, who is behind and still has all ten of his men at 126.3 against Boesch's nine at 124.9. A seventeen-point head start off one tight end is not a lead. It is a man who happened to play on Thursday."
+        },
+        {
+          "analyst": "firestarter",
+          "text": "Carlzyn. Tokyo Swift. Chop Wood. Bakers Dozen. littlescot229. The Dak Pack. And I will say the thing nobody else will: Chase loses this week. He started the perfect lineup in Week 1 and it bought him a forty-six point hole against a man who started one quarterback."
+        },
+        {
+          "analyst": "quant",
+          "text": "Bakers Dozen, Chop Wood, Carlzyn, Tokyo Swift, The Dak Pack, littlescot229. That is the projection straight down with no editorialising: current score plus whatever each roster has left. It takes four Thursday leaders and two teams that are behind. Adam is the one people will argue about — he has 130.9 still to come against 114.5, but he is 20.90 down, and 16.4 of edge does not cover 20.9 of deficit. Close. Not a toss-up."
+        },
+        {
+          "analyst": "troll",
+          "text": "Carlzyn, Tokyo Swift, Chop Wood, Bakers Dozen, littlescot229, The Dak Pack. I am taking every single Thursday leader except one, because the lesson of this league so far is that the teams that are ahead stay ahead and the teams that are behind write long messages about variance."
+        },
+        {
+          "analyst": "wildcard",
+          "text": "littlescot229, Bakers Dozen, Dsteady1234, Return of the King, Hunter I hardly know her!, and I HURT MY NABERS. Four of those are trailing right now and that is exactly why. A deficit is stored energy. Write it down."
+        }
+      ],
+      "storyline": "Who has the best record when the desk's six called shots are scored on Monday?"
+    },
+    {
+      "headline": "The worst ballot on the desk currently has the top two leaders",
+      "body": "Fat McCafferty filed the least accurate ballot of the week by a distance: 52% pairwise, an average of 3.7 spots off, and a worst call of Bakers Dozen at second when they sit eleventh. The other four all landed between 88% and 95%.\n\nHe also put littlescot229 first and Bakers Dozen second. Those two currently lead their matchups by 61.08 and 17.20, the two largest leads on the board. Nobody else had either team higher than fourth.\n\nNothing is final. Both leads were built by a combined four players on a Thursday. But the record will show that the man the desk has learned to fade named the week's two biggest leaders before a single Sunday game kicked off.",
+      "takes": [
+        {
+          "analyst": "troll",
+          "text": "Fifty-two percent. That is worse than a coin. A coin does not have a radio show. And yet here we are looking at his top two teams sitting on the two biggest leads in the league, which tells you less about him than it does about Thursday."
+        },
+        {
+          "analyst": "wildcard",
+          "text": "They scored my ballot at fifty-two percent. Fifty-two percent is a passing grade in a world that understands what I am doing. My first two teams are winning by a combined seventy-eight points. I do not need the arithmetic. The arithmetic needs me."
+        },
+        {
+          "analyst": "firestarter",
+          "text": "I am not giving him this. Bakers Dozen is up seventeen because Sam LaPorta played on Thursday and David's entire roster did not. Wait until Sunday night and ask me again, and I promise you the answer will be the same one I gave on Tuesday."
+        }
+      ],
+      "storyline": "Does Fat McCafferty's ballot survive the weekend, or does the desk get to go back to ignoring him?"
     }
   ],
   "poll": {
@@ -191,6 +208,5 @@
       }
     ],
     "title": "Week 2 desk ballots"
-  },
-  "week": 2
+  }
 }
