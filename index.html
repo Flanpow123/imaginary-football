@@ -94,12 +94,7 @@
 
   .takes{margin-top:16px;border-top:1px solid var(--line);padding-top:14px;display:grid;gap:12px}
   .take{display:flex;gap:11px}
-  .face{width:46px;height:46px;border-radius:8px;flex:none;display:flex;align-items:center;justify-content:center;font-family:var(--cond);font-weight:700;font-size:18px;color:var(--turf);overflow:hidden;background:var(--panel2)}
-  .face svg{width:100%;height:100%;display:block}
-  .face.big{width:104px;height:104px;border-radius:10px;font-size:36px}
-  .deskshot{border:1px solid var(--line);border-radius:4px;overflow:hidden;margin:2px 0 22px}
-  .deskshot svg{width:100%;height:auto;display:block}
-  @media(max-width:520px){ .face.big{width:78px;height:78px;font-size:28px} }
+  .face{width:44px;height:44px;border-radius:50%;flex:none;display:block;object-fit:cover;object-position:center;background:var(--panel2);border:1px solid var(--line)}
   .take .body{flex:1;min-width:0}
   .take .who{font-weight:600;font-size:14.5px}
   .take .role{color:var(--dim);font-weight:400;font-size:13px;margin-left:7px}
@@ -221,61 +216,37 @@ var LEAGUE_ID = "1385283286355423232";   // Imaginary Football, 2026
    delete the ones you hate. The key on the left is what news.json
    refers to. */
 var ANALYSTS = {
-  analyst: {
-    name:"Bishop Cargill",
-    role:"The Ringer, eleven seasons at tight end",
-    color:"var(--cool)",
-    brief:"Ex-player. Tells a story to get to the point, and the point is usually right.",
-    bio:"Eleven seasons at tight end, two of them good enough that people still bring them up. Cargill does not analyze a game so much as testify about it, and somewhere in the third anecdote about a Thursday night in Cleveland he says the truest sentence anyone says all week. The numbers people have stopped pretending this annoys them.",
-    beat:"What it actually feels like out there — effort, nerve, and the difference between a team that is tired and a team that has quit.",
-    signature:"Starting a sentence with “I have been in those huddles” and somehow earning it.",
-    art:"<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Bishop Cargill\"><rect x=\"-2\" y=\"-2\" width=\"104\" height=\"104\" fill=\"#6FB3D2\"/><path d=\"M0 102C0 84 16 76 50 76s34 8 34 26z\" fill=\"#16221C\"/><rect x=\"42\" y=\"58\" width=\"16\" height=\"20\" rx=\"7\" fill=\"#6B4423\"/><path d=\"M40 76l10 15 10-15 7 4-17 23-17-23z\" fill=\"#E9EFEA\"/><ellipse cx=\"50\" cy=\"40\" rx=\"23\" ry=\"25\" fill=\"#8D5524\"/><ellipse cx=\"26\" cy=\"43\" rx=\"4.5\" ry=\"5.5\" fill=\"#7A4620\"/><ellipse cx=\"74\" cy=\"43\" rx=\"4.5\" ry=\"5.5\" fill=\"#7A4620\"/><path d=\"M27 33c2-13 11-18 23-18s21 5 23 18c-6-8-13-10-23-10s-17 2-23 10z\" fill=\"#241C18\"/><path d=\"M27 42c0 18 10 30 23 30s23-12 23-30c0 12-10 16-23 16s-23-4-23-16z\" fill=\"#241C18\"/><path d=\"M34 55q16 11 32 0\" stroke=\"#241C18\" stroke-width=\"10\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"40\" cy=\"39\" rx=\"3\" ry=\"3.4\" fill=\"#1A120C\"/><ellipse cx=\"60\" cy=\"39\" rx=\"3\" ry=\"3.4\" fill=\"#1A120C\"/><circle cx=\"41\" cy=\"38\" r=\"1.1\" fill=\"#fff\"/><circle cx=\"61\" cy=\"38\" r=\"1.1\" fill=\"#fff\"/><path d=\"M33 31q7-4 13 0M54 31q7-4 13 0\" stroke=\"#241C18\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M46 45q4 4 8 0\" stroke=\"#6B4423\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M38 52q12 10 24 0z\" fill=\"#F6E7DA\"/><circle cx=\"24\" cy=\"86\" r=\"4\" fill=\"#F0C24B\"/></svg>"
-  },
-  firestarter: {
-    name:"Deacon Pyle",
-    role:"ESPN, morning debate show",
-    color:"var(--flag)",
-    brief:"Maximum volume, minimum subtlety. Turns a waiver claim into a betrayal.",
-    bio:"Pyle does not have opinions, he has performances. Every storyline in this league arrives at his desk and leaves as a three-act tragedy with a finger wagging over it. He has never once said it is still early, and he would like the record to show that.",
-    beat:"Whoever has it coming this week — grudges, betrayals, and lineup decisions he takes personally.",
-    signature:"Saying a man's full name, pausing, and then saying it again louder.",
-    art:"<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Deacon Pyle\"><rect x=\"-2\" y=\"-2\" width=\"104\" height=\"104\" fill=\"#E2593B\"/><path d=\"M8 102C8 84 24 76 50 76s26 8 26 26z\" fill=\"#111914\"/><rect x=\"42\" y=\"58\" width=\"16\" height=\"20\" rx=\"7\" fill=\"#C07A4A\"/><path d=\"M40 76l10 15 10-15 7 4-17 23-17-23z\" fill=\"#E9EFEA\"/><path d=\"M50 82l5 5-3 16-2 3-2-3-3-16z\" fill=\"#8A2B22\"/><ellipse cx=\"50\" cy=\"38\" rx=\"22\" ry=\"24\" fill=\"#E0AC69\"/><ellipse cx=\"27\" cy=\"41\" rx=\"4.5\" ry=\"5.5\" fill=\"#C07A4A\"/><ellipse cx=\"73\" cy=\"41\" rx=\"4.5\" ry=\"5.5\" fill=\"#C07A4A\"/><path d=\"M28 32c1-15 10-20 22-20s21 5 22 20c-6-10-9-14-22-14s-16 4-22 14z\" fill=\"#332417\"/><ellipse cx=\"40\" cy=\"37\" rx=\"4.6\" ry=\"5\" fill=\"#F6E7DA\"/><ellipse cx=\"60\" cy=\"37\" rx=\"4.6\" ry=\"5\" fill=\"#F6E7DA\"/><circle cx=\"40.5\" cy=\"37.4\" r=\"2.8\" fill=\"#1A120C\"/><circle cx=\"59.5\" cy=\"37.4\" r=\"2.8\" fill=\"#1A120C\"/><path d=\"M31 27q9-7 16-2M53 25q8-5 16 3\" stroke=\"#332417\" stroke-width=\"3.4\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M46 43q4 4 8 0\" stroke=\"#C07A4A\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"50\" cy=\"55\" rx=\"10\" ry=\"9\" fill=\"#3A1714\"/><path d=\"M41 51q9-3 18 0z\" fill=\"#F6E7DA\"/><ellipse cx=\"50\" cy=\"61\" rx=\"5\" ry=\"3\" fill=\"#C4534B\"/><path d=\"M76 102V70a9 9 0 0118 0v32z\" fill=\"#111914\" stroke=\"#46514A\" stroke-width=\"2.5\"/><path d=\"M85 72V50\" stroke=\"#E0AC69\" stroke-width=\"9\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"85\" cy=\"47\" r=\"5\" fill=\"#E0AC69\"/></svg>"
-  },
-  quant: {
-    name:"Odessa Prine",
-    role:"The Athletic, film and numbers",
-    color:"var(--gold)",
-    brief:"Film study and advanced stats, allergic to empty takes. Dismantles a narrative quietly.",
-    bio:"Prine watches the tape, does the math, and does not raise her voice about either. She will let a bad argument run its full length across the desk before taking it apart in a single sentence. She does not trust a number she did not compute herself, and that includes the ones on this page.",
-    beat:"Everything the box score hides — schedule luck, lineup efficiency, and the gap between what a team scored and what it earned.",
-    signature:"Waiting for the room to finish, then saying that is not what happened.",
-    art:"<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Odessa Prine\"><rect x=\"-2\" y=\"-2\" width=\"104\" height=\"104\" fill=\"#F0C24B\"/><path d=\"M24 46c0-24 12-32 26-32s26 8 26 32c0 14-2 22-6 27V46H30v27c-4-5-6-13-6-27z\" fill=\"#1F1712\"/><path d=\"M10 102C10 84 26 76 50 76s24 8 24 26z\" fill=\"#16221C\"/><rect x=\"42\" y=\"58\" width=\"16\" height=\"20\" rx=\"7\" fill=\"#C68642\"/><path d=\"M40 76l10 15 10-15 7 4-17 23-17-23z\" fill=\"#B8C6BD\"/><ellipse cx=\"50\" cy=\"40\" rx=\"21\" ry=\"23.5\" fill=\"#E8B887\"/><ellipse cx=\"27\" cy=\"43\" rx=\"4\" ry=\"5\" fill=\"#C68642\"/><ellipse cx=\"73\" cy=\"43\" rx=\"4\" ry=\"5\" fill=\"#C68642\"/><path d=\"M28 33c2-16 10-22 22-22s20 6 22 22c-6-11-12-14-22-14s-16 3-22 14z\" fill=\"#1F1712\"/><ellipse cx=\"41\" cy=\"40\" rx=\"2.6\" ry=\"3\" fill=\"#1A120C\"/><ellipse cx=\"59\" cy=\"40\" rx=\"2.6\" ry=\"3\" fill=\"#1A120C\"/><path d=\"M32 30q8-4 14-1\" stroke=\"#1F1712\" stroke-width=\"2.6\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M54 27q8-2 14 3\" stroke=\"#1F1712\" stroke-width=\"2.6\" fill=\"none\" stroke-linecap=\"round\"/><g fill=\"none\" stroke=\"#26201C\" stroke-width=\"2.8\"><rect x=\"29\" y=\"33\" width=\"19\" height=\"14\" rx=\"4\"/><rect x=\"52\" y=\"33\" width=\"19\" height=\"14\" rx=\"4\"/><path d=\"M48 39h4\"/><path d=\"M29 38l-5 2M71 38l5 2\"/></g><path d=\"M46 48q4 3 8 0\" stroke=\"#C68642\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M42 57h16\" stroke=\"#A65D57\" stroke-width=\"3.4\" fill=\"none\" stroke-linecap=\"round\"/><rect x=\"4\" y=\"74\" width=\"22\" height=\"28\" rx=\"3\" fill=\"#E9EFEA\" transform=\"rotate(-12 15 88)\"/><g stroke=\"#8CA398\" stroke-width=\"2\"><path d=\"M7 82h14M6 88h15M6 94h11\"/></g></svg>"
-  },
-  troll: {
-    name:"Roy Tannehill",
-    role:"FS1, afternoon drive",
-    color:"var(--violet)",
-    brief:"Professional provocateur. Picks a hill in September and dies on it in December.",
-    bio:"Tannehill decides what he believes before the evidence arrives and has never let the evidence change his mind. He is not trying to be right, he is trying to keep the argument alive, and by that standard he is the best in the business. Ask him about a take from three weeks ago and he will double it.",
-    beat:"The extreme position on everything — rankings, benchings, and anyone who has recently described himself as rebuilding.",
-    signature:"Refusing to concede a point the scoreboard settled an hour ago.",
-    art:"<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Roy Tannehill\"><rect x=\"-2\" y=\"-2\" width=\"104\" height=\"104\" fill=\"#A98BD6\"/><path d=\"M8 102C8 84 24 76 50 76s26 8 26 26z\" fill=\"#111914\"/><rect x=\"42\" y=\"58\" width=\"16\" height=\"20\" rx=\"7\" fill=\"#D9A06B\"/><path d=\"M40 76l10 15 10-15 7 4-17 23-17-23z\" fill=\"#E9EFEA\"/><path d=\"M50 82l5 5-3 16-2 3-2-3-3-16z\" fill=\"#2E2440\"/><ellipse cx=\"50\" cy=\"39\" rx=\"21.5\" ry=\"24\" fill=\"#F1C27D\"/><ellipse cx=\"27\" cy=\"42\" rx=\"4.2\" ry=\"5.2\" fill=\"#D9A06B\"/><ellipse cx=\"73\" cy=\"42\" rx=\"4.2\" ry=\"5.2\" fill=\"#D9A06B\"/><path d=\"M28 34C29 14 40 9 52 9c13 0 22 8 20 20-8-13-13-6-25-9-8-2-16 2-19 14z\" fill=\"#463016\"/><ellipse cx=\"40\" cy=\"39\" rx=\"3\" ry=\"3.2\" fill=\"#1A120C\"/><ellipse cx=\"60\" cy=\"38\" rx=\"3.4\" ry=\"3.8\" fill=\"#1A120C\"/><path d=\"M32 31q8-4 14-1\" stroke=\"#463016\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M53 24q9-2 15 6\" stroke=\"#463016\" stroke-width=\"3.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M46 45q4 4 8 0\" stroke=\"#D9A06B\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M38 54q12 12 24-4\" stroke=\"#8A4A44\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M56 50q5 1 7 4\" stroke=\"#8A4A44\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/></svg>"
-  },
-  wildcard: {
-    name:"Sonny Pell",
-    role:"AM 1290 The Whistle, overnight",
-    color:"var(--good)",
-    brief:"Total conviction, no supporting logic. The desk has learned to fade him on purpose.",
-    bio:"Eleven years on the overnight shift and relentlessly delighted to be there. Pell treats every week like a party and every theory like a revelation, and the theories are assembled from true facts arranged in an order that means nothing. He is wrong at a rate that has become genuinely useful to everybody else.",
-    beat:"Whatever occurred to him between two and four in the morning.",
-    signature:"Ending a completely unsupported prediction with “write it down.”",
-    art:"<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Sonny Pell\"><rect x=\"-2\" y=\"-2\" width=\"104\" height=\"104\" fill=\"#5FCB8B\"/><path d=\"M8 102C8 84 24 76 50 76s26 8 26 26z\" fill=\"#16221C\"/><rect x=\"42\" y=\"58\" width=\"16\" height=\"20\" rx=\"7\" fill=\"#C98A5B\"/><path d=\"M40 76l10 15 10-15 7 4-17 23-17-23z\" fill=\"#F0C24B\"/><ellipse cx=\"50\" cy=\"40\" rx=\"21.5\" ry=\"23.5\" fill=\"#FFDBAC\"/><ellipse cx=\"27\" cy=\"43\" rx=\"4.2\" ry=\"5.2\" fill=\"#E8B887\"/><ellipse cx=\"73\" cy=\"43\" rx=\"4.2\" ry=\"5.2\" fill=\"#E8B887\"/><path d=\"M28 36c-1-20 10-25 22-25s23 6 21 25c-5-8-5-14-12-11-6 3-10-4-16 0-5 3-11-1-15 11z\" fill=\"#B5651D\"/><path d=\"M64 17c3-9 9-12 13-8-5 1-7 6-6 12z\" fill=\"#B5651D\"/><circle cx=\"40\" cy=\"39\" r=\"6.4\" fill=\"#F6E7DA\"/><circle cx=\"60\" cy=\"39\" r=\"6.4\" fill=\"#F6E7DA\"/><circle cx=\"41\" cy=\"39.6\" r=\"3.4\" fill=\"#1A120C\"/><circle cx=\"59\" cy=\"39.6\" r=\"3.4\" fill=\"#1A120C\"/><circle cx=\"42.4\" cy=\"38\" r=\"1.3\" fill=\"#fff\"/><circle cx=\"60.4\" cy=\"38\" r=\"1.3\" fill=\"#fff\"/><path d=\"M31 28q9-5 15-1M54 27q9-4 15 1\" stroke=\"#8A4A18\" stroke-width=\"2.8\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M46 45q4 4 8 0\" stroke=\"#E8B887\" stroke-width=\"2.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M36 51q14 16 28 0z\" fill=\"#3A1714\"/><path d=\"M38 52q12 3 24 0\" stroke=\"#F6E7DA\" stroke-width=\"4.4\" fill=\"none\" stroke-linecap=\"round\"/><g transform=\"rotate(-13 50 40)\"><path d=\"M25 41a25 24 0 0150 0\" stroke=\"#1F2E26\" stroke-width=\"5.5\" fill=\"none\"/><rect x=\"18\" y=\"36\" width=\"12\" height=\"19\" rx=\"6\" fill=\"#1F2E26\"/><rect x=\"70\" y=\"36\" width=\"12\" height=\"19\" rx=\"6\" fill=\"#1F2E26\"/></g><path d=\"M28 56q11 4 11 14\" stroke=\"#1F2E26\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"39\" cy=\"71\" r=\"3.4\" fill=\"#1F2E26\"/><rect x=\"74\" y=\"84\" width=\"16\" height=\"18\" rx=\"2\" fill=\"#E9EFEA\"/><rect x=\"74\" y=\"84\" width=\"16\" height=\"4\" rx=\"2\" fill=\"#C4534B\"/></svg>"
-  }
+  analyst:     { name:"Shannon Larp", role:"Hall of Fame tight end, charismatic talking head",
+                 color:"var(--good)", image:"analysts/shannon-larp.jpeg",
+                 brief:"Big player energy, big stories, and absolutely no interest in making a point quietly.",
+                 bio:"Hall of Fame tight end turned charismatic talking head. Larger-than-life storyteller, equal parts hilarious, passionate, and theatrical. Brings real player perspective mixed with barbershop energy.",
+                 beat:"Locker-room logic, player perspective, matchup stories, and the emotional side of fantasy football.",
+                 signature:"Turning one fantasy matchup into a story that somehow involves a locker room, a childhood memory, and a life lesson." },
+  firestarter: { name:"Stephen B Smith", role:"First Take&rsquo;s high-volume engine",
+                 color:"var(--flag)", image:"analysts/stephen-b-smith.jpeg",
+                 brief:"Explosive, theatrical, and allergic to subtlety. Every fantasy debate is a championship debate.",
+                 bio:"First Take&rsquo;s high-volume engine. Explosive, theatrical, and allergic to subtlety. Turns every NFL storyline into a Broadway performance complete with finger-wagging and signature catchphrases.",
+                 beat:"Disrespect, slights, bold claims, and any manager who needs to be told that January is coming.",
+                 signature:"Starting at maximum volume and somehow getting louder." },
+  quant:       { name:"Mina Crimes", role:"ESPN, film &amp; numbers analyst",
+                 color:"var(--gold)", image:"analysts/mina-crimes.jpeg",
+                 brief:"Sharp, data-driven, dry, and completely willing to let the numbers ruin everyone's favorite narrative.",
+                 bio:"Sharp, data-driven ESPN analyst known for film study, advanced stats, and dry wit. Calm, precise, and allergic to empty hot takes&mdash;she&rsquo;ll quietly dismantle a narrative with numbers and film.",
+                 beat:"Expected points, efficiency, usage, film study, and every number that exposes a bad argument.",
+                 signature:"Producing one statistic so specific that the argument ends before anyone can think of a comeback." },
+  troll:       { name:"Skip Gayless", role:"Professional provocateur, extreme-take specialist",
+                 color:"var(--violet)", image:"analysts/skip-gayless.jpeg",
+                 brief:"Dramatic, stubborn, and prepared to die on whatever hill gets the biggest reaction.",
+                 bio:"Professional provocateur and king of the extreme take. Dramatic, stubborn, and thrives on debate. Will die on any hill&mdash;especially QB rankings or LeBron-adjacent discourse&mdash;if it keeps the argument going.",
+                 beat:"Quarterbacks, slights, rankings, ridiculous declarations, and whichever manager just gave him an opening.",
+                 signature:"Finding the hottest possible version of an otherwise reasonable opinion and defending it like a constitutional amendment." },
+  wildcard:    { name:"Fat McAfee", role:"Former NFL punter turned high-energy sports host",
+                 color:"var(--cool)", image:"analysts/fat-mcafee.jpeg",
+                 brief:"Loud, positive, chaotic, relentlessly fun, and permanently one big play away from losing his mind.",
+                 bio:"Former NFL punter turned high-energy sports show host. Loud, positive, chaotic, and relentlessly fun&mdash;more 'excited fan who somehow got a mic' than polished analyst. Loves big plays, memes, and treating football like a party.",
+                 beat:"Big plays, huge performances, memes, celebrations, and anything that deserves a parade.",
+                 signature:"Reacting to a normal fantasy development like it just won the Super Bowl." }
 };
-
-/* The desk, drawn. Invented people, invented studio. */
-var DESK_BANNER = "<svg viewBox=\"0 0 960 300\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The desk: five invented analysts behind a studio table\"><defs><radialGradient id=\"bulb\"><stop offset=\"0\" stop-color=\"#FFF4D0\"/><stop offset=\"0.55\" stop-color=\"#F0C24B\"/><stop offset=\"1\" stop-color=\"#F0C24B\" stop-opacity=\"0\"/></radialGradient><linearGradient id=\"wall\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"#16231D\"/><stop offset=\"1\" stop-color=\"#0D1411\"/></linearGradient></defs><defs><radialGradient id=\"pool0\"><stop offset=\"0\" stop-color=\"#6FB3D2\" stop-opacity=\"0.34\"/><stop offset=\"1\" stop-color=\"#6FB3D2\" stop-opacity=\"0\"/></radialGradient><radialGradient id=\"pool1\"><stop offset=\"0\" stop-color=\"#E2593B\" stop-opacity=\"0.34\"/><stop offset=\"1\" stop-color=\"#E2593B\" stop-opacity=\"0\"/></radialGradient><radialGradient id=\"pool2\"><stop offset=\"0\" stop-color=\"#F0C24B\" stop-opacity=\"0.34\"/><stop offset=\"1\" stop-color=\"#F0C24B\" stop-opacity=\"0\"/></radialGradient><radialGradient id=\"pool3\"><stop offset=\"0\" stop-color=\"#A98BD6\" stop-opacity=\"0.34\"/><stop offset=\"1\" stop-color=\"#A98BD6\" stop-opacity=\"0\"/></radialGradient><radialGradient id=\"pool4\"><stop offset=\"0\" stop-color=\"#5FCB8B\" stop-opacity=\"0.34\"/><stop offset=\"1\" stop-color=\"#5FCB8B\" stop-opacity=\"0\"/></radialGradient></defs><rect width=\"960\" height=\"300\" fill=\"url(#wall)\"/><circle cx=\"34\" cy=\"34\" r=\"26\" fill=\"url(#bulb)\" opacity=\"0.5\"/><circle cx=\"34\" cy=\"34\" r=\"9\" fill=\"#FFF4D0\"/><circle cx=\"110\" cy=\"34\" r=\"26\" fill=\"url(#bulb)\" opacity=\"0.5\"/><circle cx=\"110\" cy=\"34\" r=\"9\" fill=\"#FFF4D0\"/><circle cx=\"186\" cy=\"34\" r=\"26\" fill=\"url(#bulb)\" opacity=\"0.5\"/><circle cx=\"186\" cy=\"34\" r=\"9\" fill=\"#FFF4D0\"/><circle cx=\"262\" cy=\"34\" r=\"26\" fill=\"url(#bulb)\" opacity=\"0.5\"/><circle cx=\"262\" cy=\"34\" r=\"9\" fill=\"#FFF4D0\"/><circle cx=\"338\" cy=\"34\" r=\"26\" fill=\"url(#bulb)\" opacity=\"0.5\"/><circle cx=\"338\" cy=\"34\" r=\"9\" fill=\"#FFF4D0\"/><circle cx=\"414\" cy=\"34\" r=\"26\" fill=\"url(#bulb)\" opacity=\"0.5\"/><circle cx=\"414\" cy=\"34\" r=\"9\" fill=\"#FFF4D0\"/><circle cx=\"490\" cy=\"34\" r=\"26\" fill=\"url(#bulb)\" opacity=\"0.5\"/><circle cx=\"490\" cy=\"34\" r=\"9\" fill=\"#FFF4D0\"/><circle cx=\"566\" cy=\"34\" r=\"26\" fill=\"url(#bulb)\" opacity=\"0.5\"/><circle cx=\"566\" cy=\"34\" r=\"9\" fill=\"#FFF4D0\"/><circle cx=\"642\" cy=\"34\" r=\"26\" fill=\"url(#bulb)\" opacity=\"0.5\"/><circle cx=\"642\" cy=\"34\" r=\"9\" fill=\"#FFF4D0\"/><circle cx=\"718\" cy=\"34\" r=\"26\" fill=\"url(#bulb)\" opacity=\"0.5\"/><circle cx=\"718\" cy=\"34\" r=\"9\" fill=\"#FFF4D0\"/><circle cx=\"794\" cy=\"34\" r=\"26\" fill=\"url(#bulb)\" opacity=\"0.5\"/><circle cx=\"794\" cy=\"34\" r=\"9\" fill=\"#FFF4D0\"/><circle cx=\"870\" cy=\"34\" r=\"26\" fill=\"url(#bulb)\" opacity=\"0.5\"/><circle cx=\"870\" cy=\"34\" r=\"9\" fill=\"#FFF4D0\"/><circle cx=\"946\" cy=\"34\" r=\"26\" fill=\"url(#bulb)\" opacity=\"0.5\"/><circle cx=\"946\" cy=\"34\" r=\"9\" fill=\"#FFF4D0\"/><rect x=\"0\" y=\"64\" width=\"960\" height=\"2\" fill=\"#25392F\"/><ellipse cx=\"144\" cy=\"200\" rx=\"139\" ry=\"164\" fill=\"url(#pool0)\"/><ellipse cx=\"312\" cy=\"200\" rx=\"126\" ry=\"149\" fill=\"url(#pool1)\"/><ellipse cx=\"480\" cy=\"200\" rx=\"121\" ry=\"143\" fill=\"url(#pool2)\"/><ellipse cx=\"648\" cy=\"200\" rx=\"125\" ry=\"147\" fill=\"url(#pool3)\"/><ellipse cx=\"816\" cy=\"200\" rx=\"129\" ry=\"153\" fill=\"url(#pool4)\"/><g transform=\"translate(55,54.0) scale(1.78)\"><path d=\"M0 102C0 84 16 76 50 76s34 8 34 26z\" fill=\"#16221C\"/><rect x=\"42\" y=\"58\" width=\"16\" height=\"20\" rx=\"7\" fill=\"#6B4423\"/><path d=\"M40 76l10 15 10-15 7 4-17 23-17-23z\" fill=\"#E9EFEA\"/><ellipse cx=\"50\" cy=\"40\" rx=\"23\" ry=\"25\" fill=\"#8D5524\"/><ellipse cx=\"26\" cy=\"43\" rx=\"4.5\" ry=\"5.5\" fill=\"#7A4620\"/><ellipse cx=\"74\" cy=\"43\" rx=\"4.5\" ry=\"5.5\" fill=\"#7A4620\"/><path d=\"M27 33c2-13 11-18 23-18s21 5 23 18c-6-8-13-10-23-10s-17 2-23 10z\" fill=\"#241C18\"/><path d=\"M27 42c0 18 10 30 23 30s23-12 23-30c0 12-10 16-23 16s-23-4-23-16z\" fill=\"#241C18\"/><path d=\"M34 55q16 11 32 0\" stroke=\"#241C18\" stroke-width=\"10\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"40\" cy=\"39\" rx=\"3\" ry=\"3.4\" fill=\"#1A120C\"/><ellipse cx=\"60\" cy=\"39\" rx=\"3\" ry=\"3.4\" fill=\"#1A120C\"/><circle cx=\"41\" cy=\"38\" r=\"1.1\" fill=\"#fff\"/><circle cx=\"61\" cy=\"38\" r=\"1.1\" fill=\"#fff\"/><path d=\"M33 31q7-4 13 0M54 31q7-4 13 0\" stroke=\"#241C18\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M46 45q4 4 8 0\" stroke=\"#6B4423\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M38 52q12 10 24 0z\" fill=\"#F6E7DA\"/><circle cx=\"24\" cy=\"86\" r=\"4\" fill=\"#F0C24B\"/></g><g transform=\"translate(231,70.0) scale(1.62)\"><path d=\"M8 102C8 84 24 76 50 76s26 8 26 26z\" fill=\"#111914\"/><rect x=\"42\" y=\"58\" width=\"16\" height=\"20\" rx=\"7\" fill=\"#C07A4A\"/><path d=\"M40 76l10 15 10-15 7 4-17 23-17-23z\" fill=\"#E9EFEA\"/><path d=\"M50 82l5 5-3 16-2 3-2-3-3-16z\" fill=\"#8A2B22\"/><ellipse cx=\"50\" cy=\"38\" rx=\"22\" ry=\"24\" fill=\"#E0AC69\"/><ellipse cx=\"27\" cy=\"41\" rx=\"4.5\" ry=\"5.5\" fill=\"#C07A4A\"/><ellipse cx=\"73\" cy=\"41\" rx=\"4.5\" ry=\"5.5\" fill=\"#C07A4A\"/><path d=\"M28 32c1-15 10-20 22-20s21 5 22 20c-6-10-9-14-22-14s-16 4-22 14z\" fill=\"#332417\"/><ellipse cx=\"40\" cy=\"37\" rx=\"4.6\" ry=\"5\" fill=\"#F6E7DA\"/><ellipse cx=\"60\" cy=\"37\" rx=\"4.6\" ry=\"5\" fill=\"#F6E7DA\"/><circle cx=\"40.5\" cy=\"37.4\" r=\"2.8\" fill=\"#1A120C\"/><circle cx=\"59.5\" cy=\"37.4\" r=\"2.8\" fill=\"#1A120C\"/><path d=\"M31 27q9-7 16-2M53 25q8-5 16 3\" stroke=\"#332417\" stroke-width=\"3.4\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M46 43q4 4 8 0\" stroke=\"#C07A4A\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"50\" cy=\"55\" rx=\"10\" ry=\"9\" fill=\"#3A1714\"/><path d=\"M41 51q9-3 18 0z\" fill=\"#F6E7DA\"/><ellipse cx=\"50\" cy=\"61\" rx=\"5\" ry=\"3\" fill=\"#C4534B\"/><path d=\"M76 102V70a9 9 0 0118 0v32z\" fill=\"#111914\" stroke=\"#46514A\" stroke-width=\"2.5\"/><path d=\"M85 72V50\" stroke=\"#E0AC69\" stroke-width=\"9\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"85\" cy=\"47\" r=\"5\" fill=\"#E0AC69\"/></g><g transform=\"translate(402,77.0) scale(1.55)\"><path d=\"M24 46c0-24 12-32 26-32s26 8 26 32c0 14-2 22-6 27V46H30v27c-4-5-6-13-6-27z\" fill=\"#1F1712\"/><path d=\"M10 102C10 84 26 76 50 76s24 8 24 26z\" fill=\"#16221C\"/><rect x=\"42\" y=\"58\" width=\"16\" height=\"20\" rx=\"7\" fill=\"#C68642\"/><path d=\"M40 76l10 15 10-15 7 4-17 23-17-23z\" fill=\"#B8C6BD\"/><ellipse cx=\"50\" cy=\"40\" rx=\"21\" ry=\"23.5\" fill=\"#E8B887\"/><ellipse cx=\"27\" cy=\"43\" rx=\"4\" ry=\"5\" fill=\"#C68642\"/><ellipse cx=\"73\" cy=\"43\" rx=\"4\" ry=\"5\" fill=\"#C68642\"/><path d=\"M28 33c2-16 10-22 22-22s20 6 22 22c-6-11-12-14-22-14s-16 3-22 14z\" fill=\"#1F1712\"/><ellipse cx=\"41\" cy=\"40\" rx=\"2.6\" ry=\"3\" fill=\"#1A120C\"/><ellipse cx=\"59\" cy=\"40\" rx=\"2.6\" ry=\"3\" fill=\"#1A120C\"/><path d=\"M32 30q8-4 14-1\" stroke=\"#1F1712\" stroke-width=\"2.6\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M54 27q8-2 14 3\" stroke=\"#1F1712\" stroke-width=\"2.6\" fill=\"none\" stroke-linecap=\"round\"/><g fill=\"none\" stroke=\"#26201C\" stroke-width=\"2.8\"><rect x=\"29\" y=\"33\" width=\"19\" height=\"14\" rx=\"4\"/><rect x=\"52\" y=\"33\" width=\"19\" height=\"14\" rx=\"4\"/><path d=\"M48 39h4\"/><path d=\"M29 38l-5 2M71 38l5 2\"/></g><path d=\"M46 48q4 3 8 0\" stroke=\"#C68642\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M42 57h16\" stroke=\"#A65D57\" stroke-width=\"3.4\" fill=\"none\" stroke-linecap=\"round\"/><rect x=\"4\" y=\"74\" width=\"22\" height=\"28\" rx=\"3\" fill=\"#E9EFEA\" transform=\"rotate(-12 15 88)\"/><g stroke=\"#8CA398\" stroke-width=\"2\"><path d=\"M7 82h14M6 88h15M6 94h11\"/></g></g><g transform=\"translate(568,72.0) scale(1.6)\"><path d=\"M8 102C8 84 24 76 50 76s26 8 26 26z\" fill=\"#111914\"/><rect x=\"42\" y=\"58\" width=\"16\" height=\"20\" rx=\"7\" fill=\"#D9A06B\"/><path d=\"M40 76l10 15 10-15 7 4-17 23-17-23z\" fill=\"#E9EFEA\"/><path d=\"M50 82l5 5-3 16-2 3-2-3-3-16z\" fill=\"#2E2440\"/><ellipse cx=\"50\" cy=\"39\" rx=\"21.5\" ry=\"24\" fill=\"#F1C27D\"/><ellipse cx=\"27\" cy=\"42\" rx=\"4.2\" ry=\"5.2\" fill=\"#D9A06B\"/><ellipse cx=\"73\" cy=\"42\" rx=\"4.2\" ry=\"5.2\" fill=\"#D9A06B\"/><path d=\"M28 34C29 14 40 9 52 9c13 0 22 8 20 20-8-13-13-6-25-9-8-2-16 2-19 14z\" fill=\"#463016\"/><ellipse cx=\"40\" cy=\"39\" rx=\"3\" ry=\"3.2\" fill=\"#1A120C\"/><ellipse cx=\"60\" cy=\"38\" rx=\"3.4\" ry=\"3.8\" fill=\"#1A120C\"/><path d=\"M32 31q8-4 14-1\" stroke=\"#463016\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M53 24q9-2 15 6\" stroke=\"#463016\" stroke-width=\"3.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M46 45q4 4 8 0\" stroke=\"#D9A06B\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M38 54q12 12 24-4\" stroke=\"#8A4A44\" stroke-width=\"4\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M56 50q5 1 7 4\" stroke=\"#8A4A44\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/></g><g transform=\"translate(733,66.0) scale(1.66)\"><path d=\"M8 102C8 84 24 76 50 76s26 8 26 26z\" fill=\"#16221C\"/><rect x=\"42\" y=\"58\" width=\"16\" height=\"20\" rx=\"7\" fill=\"#C98A5B\"/><path d=\"M40 76l10 15 10-15 7 4-17 23-17-23z\" fill=\"#F0C24B\"/><ellipse cx=\"50\" cy=\"40\" rx=\"21.5\" ry=\"23.5\" fill=\"#FFDBAC\"/><ellipse cx=\"27\" cy=\"43\" rx=\"4.2\" ry=\"5.2\" fill=\"#E8B887\"/><ellipse cx=\"73\" cy=\"43\" rx=\"4.2\" ry=\"5.2\" fill=\"#E8B887\"/><path d=\"M28 36c-1-20 10-25 22-25s23 6 21 25c-5-8-5-14-12-11-6 3-10-4-16 0-5 3-11-1-15 11z\" fill=\"#B5651D\"/><path d=\"M64 17c3-9 9-12 13-8-5 1-7 6-6 12z\" fill=\"#B5651D\"/><circle cx=\"40\" cy=\"39\" r=\"6.4\" fill=\"#F6E7DA\"/><circle cx=\"60\" cy=\"39\" r=\"6.4\" fill=\"#F6E7DA\"/><circle cx=\"41\" cy=\"39.6\" r=\"3.4\" fill=\"#1A120C\"/><circle cx=\"59\" cy=\"39.6\" r=\"3.4\" fill=\"#1A120C\"/><circle cx=\"42.4\" cy=\"38\" r=\"1.3\" fill=\"#fff\"/><circle cx=\"60.4\" cy=\"38\" r=\"1.3\" fill=\"#fff\"/><path d=\"M31 28q9-5 15-1M54 27q9-4 15 1\" stroke=\"#8A4A18\" stroke-width=\"2.8\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M46 45q4 4 8 0\" stroke=\"#E8B887\" stroke-width=\"2.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M36 51q14 16 28 0z\" fill=\"#3A1714\"/><path d=\"M38 52q12 3 24 0\" stroke=\"#F6E7DA\" stroke-width=\"4.4\" fill=\"none\" stroke-linecap=\"round\"/><g transform=\"rotate(-13 50 40)\"><path d=\"M25 41a25 24 0 0150 0\" stroke=\"#1F2E26\" stroke-width=\"5.5\" fill=\"none\"/><rect x=\"18\" y=\"36\" width=\"12\" height=\"19\" rx=\"6\" fill=\"#1F2E26\"/><rect x=\"70\" y=\"36\" width=\"12\" height=\"19\" rx=\"6\" fill=\"#1F2E26\"/></g><path d=\"M28 56q11 4 11 14\" stroke=\"#1F2E26\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"39\" cy=\"71\" r=\"3.4\" fill=\"#1F2E26\"/><rect x=\"74\" y=\"84\" width=\"16\" height=\"18\" rx=\"2\" fill=\"#E9EFEA\"/><rect x=\"74\" y=\"84\" width=\"16\" height=\"4\" rx=\"2\" fill=\"#C4534B\"/></g><rect x=\"-10\" y=\"230\" width=\"980\" height=\"70\" rx=\"6\" fill=\"#141F1A\"/><rect x=\"-10\" y=\"230\" width=\"980\" height=\"4\" fill=\"#25392F\"/><rect x=\"-10\" y=\"262\" width=\"980\" height=\"2\" fill=\"#1B2A23\"/><rect x=\"392\" y=\"246\" width=\"176\" height=\"34\" rx=\"3\" fill=\"#0D1411\" stroke=\"#25392F\" stroke-width=\"2\"/><text x=\"480\" y=\"269\" text-anchor=\"middle\" fill=\"#F0C24B\" font-family=\"Barlow Condensed, Barlow, system-ui, sans-serif\" font-weight=\"700\" font-size=\"21\" letter-spacing=\"2.5\">THE DESK</text><rect x=\"137\" y=\"248\" width=\"26\" height=\"26\" rx=\"3\" fill=\"#C4534B\"/><path d=\"M163 254h7a6 6 0 010 12h-7\" fill=\"none\" stroke=\"#C4534B\" stroke-width=\"4\"/><rect x=\"805\" y=\"248\" width=\"26\" height=\"26\" rx=\"3\" fill=\"#6FB3D2\"/><path d=\"M831 254h7a6 6 0 010 12h-7\" fill=\"none\" stroke=\"#6FB3D2\" stroke-width=\"4\"/></svg>";
-
 
 /* Sleeper only knows handles. The league knows people. Left side is the
    Sleeper user_id, which never changes even if somebody renames themselves. */
@@ -338,6 +309,11 @@ function esc(s){
   return String(s==null?"":s).replace(/[&<>"']/g,function(c){
     return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
   });
+}
+function analystFace(a){
+  if(a&&a.image) return '<img class="face" src="'+esc(a.image)+'" alt="" loading="lazy">';
+  var initials=(a&&a.name?a.name:"??").replace(/^The\s+/i,"").slice(0,2);
+  return '<div class="face" style="background:'+(a&&a.color?a.color:'var(--dim)')+'">'+esc(initials)+'</div>';
 }
 function num(n,d){ d=d==null?2:d; var v=Number(n); return isFinite(v)?v.toFixed(d):"0.00"; }
 function get(path){
@@ -1594,7 +1570,7 @@ function ballotsHTML(){
     voters.forEach(function(v){
       if(!v.comment) return;
       h+='<div class="take">'
-        +faceHTML(v.meta,false)
+        +analystFace(v.meta)
         +'<div class="body"><div class="who">'+esc(v.meta.name)
         +(v.meta.role?'<span class="role">'+esc(v.meta.role)+'</span>':'')+'</div>'
         +'<div class="txt">'+esc(v.comment)+'</div></div></div>';
@@ -1686,16 +1662,6 @@ function tocHTML(stories){
   return h+'</div>';
 }
 
-/* An analyst's portrait. Drawn, not photographed -- these are invented people.
-   Any key news.json makes up that the desk does not have falls back to initials. */
-function faceHTML(a, big){
-  var cls = "face" + (big ? " big" : "");
-  if(a && a.art) return '<div class="'+cls+'">'+a.art+'</div>';
-  var nm = (a && a.name) ? a.name : "";
-  var initials = nm ? nm.replace(/^The\s+/i,"").slice(0,2) : "??";
-  return '<div class="'+cls+'" style="background:'+((a&&a.color)||"var(--dim)")+'">'+esc(initials)+'</div>';
-}
-
 function storyHTML(st,i){
   var h='<article class="story" id="story-'+i+'">';
   if(st.sample) h+='<div class="sample">Sample story.</div>';
@@ -1708,7 +1674,7 @@ function storyHTML(st,i){
     st.takes.forEach(function(t){
       var a=ANALYSTS[t.analyst]||{name:t.analyst||"Anonymous",role:"",color:"var(--dim)"};
       h+='<div class="take">'
-        +faceHTML(a,false)
+        +analystFace(a)
         +'<div class="body"><div class="who">'+esc(a.name)
         +(a.role?'<span class="role">'+esc(a.role)+'</span>':'')+'</div>'
         +'<div class="txt">'+esc(t.text||"")+'</div></div></div>';
@@ -2095,15 +2061,6 @@ function briefingText(){
     L.push("that analyst genuinely would. A ballot that matches the table exactly is a wasted ballot.");
     L.push("");
   }
-
-  L.push("HOW MANY ANALYSTS PER STORY");
-  L.push("Three is the normal number. Give the lead story all of them, give the small ones two or");
-  L.push("three, and vary who appears where. Across a full edition every analyst has to turn up at");
-  L.push("least once, and nobody should appear in every single story -- a desk where all five react");
-  L.push("to everything reads like a form being filled in rather than a newsroom. Pick the analysts a");
-  L.push("story actually earns: the numbers story wants Prine, the grudge wants Pyle, and a story");
-  L.push("about somebody getting humiliated does not need a measured second opinion.");
-  L.push("");
 
   L.push("THE DESK");
   L.push("These are the only analyst keys news.json may use. Keep the voices apart -- if two");
@@ -2924,8 +2881,7 @@ function analystRecord(){
 
 function renderAnalysts(){
   var rec=analystRecord();
-  var h='<div class="deskshot">'+DESK_BANNER+'</div>'
-    +'<h2>Meet the desk</h2>'
+  var h='<h2>Meet the desk</h2>'
     +'<p class="note">The people who cover this league, for reasons none of them will explain. '
     +'Accuracy is pairwise: of every pair of teams, how often they put the two in the right order, '
     +'measured against the power rankings across every ballot they have ever filed.</p>';
@@ -2933,8 +2889,8 @@ function renderAnalysts(){
   Object.keys(ANALYSTS).forEach(function(k){
     var a=ANALYSTS[k], r=rec[k]||{};
     h+='<div class="poll-wrap" style="margin-bottom:14px">'
-      +'<div class="take" style="border:none;padding:0;margin:0;gap:16px">'
-      +faceHTML(a,true)
+      +'<div class="take" style="border:none;padding:0;margin:0">'
+      +analystFace(a)
       +'<div class="body"><div class="who">'+esc(a.name)
       +'<span class="role">'+esc(a.role)+'</span></div>'
       +'<div class="txt">'+esc(a.bio||a.brief||"")+'</div></div></div>';
