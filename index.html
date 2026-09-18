@@ -1149,13 +1149,17 @@ function receiptsHTML(){
   if(!actual){
     return '<h2 style="margin-top:34px">Receipts</h2>'
       + '<div class="msg">Every ballot above is on the record. The moment week 1 goes final, '
-      + 'each one gets scored against the power rankings and nobody gets to quietly revise it.</div>';
+      + 'each one gets graded against the real power rankings -- how many pairs of teams they put in the right '
+      + 'order -- and nobody gets to quietly revise it.</div>';
   }
 
   var h = '<h2 style="margin-top:34px">Receipts</h2>'
-    + '<p class="note">Each ballot scored against the power rankings as they stand after week ' + S.finalWeek + '. '
-    + 'Pairwise accuracy is the share of all team pairs a desk put in the right order. '
-    + 'Nobody submits these twice.</p>';
+    + '<p class="note">Anybody can rank a league. This is the part where somebody checks. '
+    + 'Every ballot above gets graded against the power rankings as they actually stand after week ' + S.finalWeek + '. '
+    + '<b>Pairwise</b> takes every possible pair of teams and asks whether the analyst had the better one ahead: '
+    + '100% is a flawless ballot, 50% is a coin flip, and below that they are actively worse than guessing. '
+    + '<b>Avg spots off</b> is how far a typical team landed from where they filed it. '
+    + 'Ballots are permanent. Nobody gets to submit one twice.</p>';
 
   polls.slice(-3).reverse().forEach(function(entry){
     var rows = [];
@@ -1572,7 +1576,7 @@ function ballotsHTML(){
 
   var h='<h2 style="margin-top:34px">'+esc(poll.title||"The desk ballots")+'</h2>'
     +'<p class="note">'
-    +esc(poll.note||("Each analyst files a full ranking. First place is worth "+S.rosters.length+" points down to 1, exactly like the college football polls. The page counts the votes; the table above is the arithmetic they are arguing with."))
+    +esc(poll.note||("How this works: every week, before the games count, each analyst ranks all "+S.rosters.length+" teams from best to worst. First place is worth "+S.rosters.length+" points, last place 1, the same way the college football polls do it. Add up every ballot and you get the table below -- the desk's official opinion of the league. The power rankings up top are the math. This is the argument with it."))
     +'</p>';
 
   h+='<div class="scroll"><table><thead><tr><th></th><th>Team</th><th>Points</th><th>First</th>';
@@ -3208,8 +3212,9 @@ function renderAnalysts(){
   var h='<div class="deskshot"><img id="deskshot-img" src="'+DESK_PHOTO+'?v='+ASSET_V+'" alt="The desk"></div>'
     +'<h2>Meet the desk</h2>'
     +'<p class="note">The people who cover this league, for reasons none of them will explain. '
-    +'Accuracy is pairwise: of every pair of teams, how often they put the two in the right order, '
-    +'measured against the power rankings across every ballot they have ever filed.</p>';
+    +'Each one ranks all the teams every week. Accuracy is how often they get a pair right: take any two '
+    +'teams, did this analyst have the better one ahead? 100% is perfect, 50% is a coin flip. It counts every '
+    +'ballot they have ever filed, so one lucky week does not save anybody.</p>';
 
   Object.keys(ANALYSTS).forEach(function(k){
     var a=ANALYSTS[k], r=rec[k]||{};
