@@ -43,8 +43,19 @@
   .masthead .sub{color:var(--dim);font-size:14px;margin-top:6px}
   .clock{font-family:var(--cond);font-weight:600;font-size:15px;color:var(--gold);border:1px solid var(--line);border-radius:2px;padding:5px 10px;white-space:nowrap}
 
-  nav{display:flex;gap:2px;margin:0 -16px;padding:10px 16px;overflow-x:auto;-webkit-overflow-scrolling:touch;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--turf);z-index:20}
-  nav button{font-family:var(--cond);font-size:19px;font-weight:600;background:none;border:none;border-bottom:2px solid transparent;color:var(--dim);padding:6px 12px;cursor:pointer;white-space:nowrap}
+  /* Two rows rather than one scrolling row. The top row is what this site
+     does that Sleeper does not; the bottom row is the reference material.
+     Wrapping means no scrollbar at any width. */
+  nav{margin:0 -16px;padding:8px 16px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--turf);z-index:20}
+  nav .tier{display:flex;flex-wrap:wrap;gap:2px 0}
+  nav .tier2{padding:2px 0 6px;border-top:1px solid var(--line);margin-top:6px}
+  nav button{font-family:var(--cond);font-size:19px;font-weight:600;background:none;border:none;border-bottom:2px solid transparent;color:var(--dim);padding:5px 11px;cursor:pointer;white-space:nowrap}
+  nav .tier1 button:first-child,nav .tier2 button:first-child{padding-left:0}
+  nav .tier2 button{font-size:15px;padding:3px 10px;opacity:.85}
+  @media(max-width:520px){
+    nav button{font-size:17px;padding:4px 9px}
+    nav .tier2 button{font-size:14px;padding:3px 8px}
+  }
   nav button:hover{color:var(--text)}
   nav button[aria-selected="true"]{color:var(--gold);border-bottom-color:var(--gold)}
   nav button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
@@ -191,22 +202,24 @@
   </header>
 
   <nav role="tablist">
-    <button role="tab" data-tab="news" aria-selected="true">Newsroom</button>
-    <button role="tab" data-tab="analysts" aria-selected="false">The Desk</button>
-    <button role="tab" data-tab="power" aria-selected="false">Power</button>
-    <button role="tab" data-tab="rivalry" aria-selected="false">Rivalries</button>
-    <button role="tab" data-tab="champs" aria-selected="false">Title Picks</button>
-    <button role="tab" data-tab="book" aria-selected="false">The Book</button>
-    <button role="tab" data-tab="week" aria-selected="false">Scoreboard</button>
-    <button role="tab" data-tab="standings" aria-selected="false">Standings</button>
-    <button role="tab" data-tab="moves" aria-selected="false">Moves</button>
-    <button role="tab" data-tab="records" aria-selected="false">Records</button>
-    <button role="tab" data-tab="history" aria-selected="false">History</button>
+    <div class="tier tier1">
+      <button role="tab" data-tab="news" aria-selected="true">Newsroom</button>
+      <button role="tab" data-tab="analysts" aria-selected="false">The Desk</button>
+      <button role="tab" data-tab="power" aria-selected="false">Power</button>
+      <button role="tab" data-tab="rivalry" aria-selected="false">Rivalries</button>
+      <button role="tab" data-tab="champs" aria-selected="false">Title Picks</button>
+    </div>
+    <div class="tier tier2">
+      <button role="tab" data-tab="week" aria-selected="false">Scoreboard</button>
+      <button role="tab" data-tab="standings" aria-selected="false">Standings</button>
+      <button role="tab" data-tab="moves" aria-selected="false">Moves</button>
+      <button role="tab" data-tab="records" aria-selected="false">Records</button>
+      <button role="tab" data-tab="history" aria-selected="false">History</button>
+    </div>
   </nav>
 
   <section id="tab-news"><div class="msg">Reading the league.</div></section>
   <section id="tab-week" hidden></section>
-  <section id="tab-book" hidden></section>
   <section id="tab-standings" hidden></section>
   <section id="tab-power" hidden></section>
   <section id="tab-moves" hidden></section>
@@ -1360,7 +1373,10 @@ function gradePicks(){
   return rec;
 }
 
+/* Shelved 2026-09-18: the tab came off the nav, the machinery stays.
+   Restore by putting back <section id="tab-book"> and a nav button. */
 function renderBook(){
+  if(!$("tab-book")) return;
   var box = $("tab-book");
   var week = S.bookWeek || bookWeekNumber();
   var lines = bookLines(week);
@@ -3954,7 +3970,6 @@ tabs.forEach(function(btn){
     if(btn.dataset.tab==="history") renderHistory();
     if(btn.dataset.tab==="records") renderRecords();
     if(btn.dataset.tab==="rivalry") renderRivalry();
-    if(btn.dataset.tab==="book") renderBook();
     if(btn.dataset.tab==="champs") renderTitlePicks();
   });
 });

@@ -66,6 +66,18 @@ To change a pick (a new analyst, a mid-season reset) edit that block. Team names
 matched the same way everywhere else on the site, so a manager renaming his team on
 Sleeper does not break anything.
 
+## Tabs
+
+Two rows. The top row — Newsroom, The Desk, Power, Rivalries, Title Picks — is what this site
+does that Sleeper does not. The bottom row is the reference material. The nav wraps instead of
+scrolling, so there is no scrollbar at any screen width.
+
+**The Book is shelved.** It was a private against-the-spread card saved in one browser, which
+meant nobody could compare theirs to anybody else's. The tab and its `<section>` are gone but
+`renderBook()` and the grading code are still in the file and still work — restoring it needs a
+nav button and a `<section id="tab-book">`. The grading machinery is wanted for the analyst
+pick'em, which is why it was shelved rather than deleted.
+
 ## The draft report card
 
 The card grades against week 1 projections, which never change once week 1 is over.
