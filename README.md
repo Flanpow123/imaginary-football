@@ -55,6 +55,23 @@ visitors see no sign a human is involved.
 - **The briefing lists the desk.** A `THE DESK` section names every analyst key and persona,
   so the first edition knows the cast before any archive exists.
 
+## Injuries
+
+The briefing carries an **INJURY REPORT** section and tags every starter line with Sleeper's
+designation, e.g. `DJ Moore (WR · BUF) 13.1 -> -0.10  [final]  [Out · Shoulder]`. A starter who
+finished under 40% of his projection while carrying a designation is flagged as having likely
+left the game.
+
+This costs nothing extra: the page already downloads Sleeper's player file for names, and the
+injury fields are on the same objects. Nothing has to be looked up by hand at writing time, and
+because the injury is *in* the briefing, the rule that every claim must come from the briefing
+covers it.
+
+Two limits worth knowing. Sleeper updates designations on its own schedule, so a player hurt in
+a game that has just ended may not be listed yet. And a designation says a player is hurt, not
+that an injury caused a specific bad score — the briefing says so explicitly and tells the desk
+to report the number rather than invent the reason.
+
 ## Title Picks
 
 Each analyst has one team picked to win the championship. The picks live in the
