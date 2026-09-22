@@ -342,8 +342,9 @@ var TITLE_PICKS = {
     take:"Everybody in this building has them fourth. Fourth is where you hide a team you are afraid to be wrong about. I am not afraid. They win it, and I will be saying this in December."
   },
   wildcard: {
-    team:"The Shortbus Superstars",   // was Bakers Dozen when the pick was made
-    owner:"737422958909394944",    // Boesch
+    team:"The Shortbus Superstars",
+    asNamed:"Bakers Dozen",       // what it was called when he called it
+    owner:"737422958909394944",   // Boesch (PlutosNotReal)
     locked:2,
     take:"Bakers Dozen. I know. I know what the table says. The table has not seen what I have seen, which is a schedule that opens up in week seven and a man who drafts angry. Write it down."
   }
@@ -376,7 +377,7 @@ var MANAGERS = {
   "1126947475291488256": "Cole",     // Coleh1234      -- The Dak Pack
   "467951345706463232":  "Darrien",  // Dsteady1234
   "726488535506477056":  "Adam",     // Flanpow123     -- Hunter I hardly know her!
-  "737422958909394944":  "Boesch",   // PlutosNotReal  -- Bakers Dozen
+  "737422958909394944":  "Boesch",   // PlutosNotReal  -- The Shortbus Superstars (was Bakers Dozen)
   "873395292542836736":  "Jace"      // thekoolaidman6 -- Kool-Aid Man
 };
 
@@ -3308,7 +3309,9 @@ function renderTitlePicks(){
     if(!r.pick.take) return;
     h += '<div class="take">' + faceHTML(r.meta, false)
       + '<div class="body"><div class="who">' + esc(r.meta.name)
-      + '<span class="role">on ' + esc(r.name) + '</span></div>'
+      + '<span class="role">on ' + esc(r.name)
+      + (r.pick.asNamed && r.pick.asNamed !== r.name ? ', picked as ' + esc(r.pick.asNamed) : '')
+      + '</span></div>'
       + '<div class="txt">' + esc(r.pick.take) + '</div></div></div>';
   });
   h += '</div>';
