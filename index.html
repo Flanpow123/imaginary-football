@@ -319,26 +319,31 @@ var ANALYSTS = {
 var TITLE_PICKS = {
   analyst: {
     team:"F&F: Tokyo Swift",
+    owner:"1127648633937113088",   // Cody
     locked:2,
     take:"I have been on teams that had that feeling in week two, where nobody is talking about the record because everybody already knows. Tokyo has it. Write the name down."
   },
   firestarter: {
     team:"Team Carlzyn",
+    owner:"1126406360045948928",   // Mason
     locked:2,
     take:"One hundred and sixty-seven point nine six. WITH points left on the bench. That is not a hot start, that is a warning, and I am the only one on this desk treating it like one."
   },
   quant: {
     team:"I HURT MY NABERS",
+    owner:"464458259340718080",    // Chase
     locked:2,
     take:"A perfect lineup is not luck, it is process, and process is the only thing in this league that survives a bad month. I will take the best process over the best two weeks."
   },
   troll: {
     team:"Chop Wood, Carry Water",
+    owner:"1003766077228183552",   // Blake
     locked:2,
     take:"Everybody in this building has them fourth. Fourth is where you hide a team you are afraid to be wrong about. I am not afraid. They win it, and I will be saying this in December."
   },
   wildcard: {
-    team:"Bakers Dozen",
+    team:"The Shortbus Superstars",   // was Bakers Dozen when the pick was made
+    owner:"737422958909394944",    // Boesch
     locked:2,
     take:"Bakers Dozen. I know. I know what the table says. The table has not seen what I have seen, which is a schedule that opens up in week seven and a man who drafts angry. Write it down."
   }
@@ -2281,9 +2286,10 @@ function briefingText(){
       Object.keys(ANALYSTS).forEach(function(k){
         var p = (typeof TITLE_PICKS !== "undefined" && TITLE_PICKS) ? TITLE_PICKS[k] : null;
         if(!p || !p.team) return;
-        var rid = resolveTeam(p.team);
+        var rid = pickRosterId(p);
+        var nm = rid != null ? teamName(rid) : p.team;
         var pos = (rid != null && rk[rid]) ? " (currently " + ordinal(rk[rid]) + ")" : "";
-        L.push("  " + ANALYSTS[k].name + " -- " + p.team + pos);
+        L.push("  " + ANALYSTS[k].name + " -- " + nm + pos);
       });
     })();
     L.push("Reference a pick when the week made it look smart or made it look ridiculous. That is");
@@ -3163,13 +3169,28 @@ function renderAnalysts(){
 /* ============================================================
    TITLE PICKS -- one call per analyst, tracked all season
    ============================================================ */
+/* Owner id first, team name second. A manager who renames his team should
+   not be able to shake off a prediction somebody made about him. */
+function rosterIdForOwner(uid){
+  if(uid == null) return null;
+  for(var i = 0; i < S.rosters.length; i++){
+    if(String(S.rosters[i].owner_id) === String(uid)) return S.rosters[i].roster_id;
+  }
+  return null;
+}
+function pickRosterId(p){
+  if(!p) return null;
+  var rid = rosterIdForOwner(p.owner);
+  return rid != null ? rid : resolveTeam(p.team);
+}
+
 function titlePickRows(){
   var rank = rankNow() || {};
   var out = [];
   Object.keys(ANALYSTS).forEach(function(k){
     var p = (typeof TITLE_PICKS !== "undefined" && TITLE_PICKS) ? TITLE_PICKS[k] : null;
     if(!p || !p.team) return;
-    var rid = resolveTeam(p.team);
+    var rid = pickRosterId(p);
     var r = rid != null ? rosterById(rid) : null;
     var st = (r && r.settings) || {};
     out.push({
