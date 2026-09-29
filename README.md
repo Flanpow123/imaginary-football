@@ -55,6 +55,15 @@ visitors see no sign a human is involved.
 - **The briefing lists the desk.** A `THE DESK` section names every analyst key and persona,
   so the first edition knows the cast before any archive exists.
 
+## The share card
+
+`?desk` reveals a **Share this week** button that draws the week onto a 1080x1350 PNG and hands it
+to the phone's share sheet, or downloads it on desktop.
+
+The card leads with one story. Add `"share": true` to a story in `news.json` and the card uses its
+headline and pulls its quote from that story's takes. With no flag set it uses the top story. Keep
+the headline short — the card gives it two lines and truncates after that.
+
 ## Injuries
 
 The briefing carries an **INJURY REPORT** section and tags every starter line with Sleeper's

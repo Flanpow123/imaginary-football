@@ -1604,18 +1604,35 @@ function wrapLines(ctx, text, maxW, max){
 
 /* The shortest take that is still substantial. A card wants a punchline, not a
    paragraph, and the one-liners are the ones people actually repeat. */
+/* The story the card should lead with: whichever one sets "share": true
+   in news.json, else the top story of the edition. */
+function featuredStory(){
+  var list = (S.news && S.news.stories) || [];
+  for(var i = 0; i < list.length; i++){ if(list[i] && list[i].share) return list[i]; }
+  return list[0] || null;
+}
+
 function pickShareQuote(){
-  var best = null, fb = null;
-  ((S.news && S.news.stories) || []).forEach(function(st){
-    (st.takes || []).forEach(function(t){
-      var a = ANALYSTS[t.analyst];
-      if(!a || !t.text) return;
-      if(!fb) fb = {who: a.name, text: t.text};
-      if(t.text.length < 60) return;
-      if(!best || t.text.length < best.text.length) best = {who: a.name, text: t.text};
+  var feat = featuredStory();
+  // A quote from the story on the card beats a better quote from a story
+  // that is not on it.
+  var pools = feat ? [[feat], ((S.news && S.news.stories) || [])]
+                   : [((S.news && S.news.stories) || [])];
+  var fb = null;
+  for(var p = 0; p < pools.length; p++){
+    var best = null;
+    pools[p].forEach(function(st){
+      ((st && st.takes) || []).forEach(function(t){
+        var a = ANALYSTS[t.analyst];
+        if(!a || !t.text) return;
+        if(!fb) fb = {who: a.name, text: t.text};
+        if(t.text.length < 60) return;
+        if(!best || t.text.length < best.text.length) best = {who: a.name, text: t.text};
+      });
     });
-  });
-  return best || fb;
+    if(best) return best;
+  }
+  return fb;
 }
 
 function shareWeekNumber(){
@@ -1647,6 +1664,20 @@ function drawShareCard(){
   x.fillStyle = P.text; x.font = shareFont(62, 700, true);
   x.fillText(fitText(x, (S.league && S.league.name) || "Fantasy Football", SHARE_W - pad*2), pad, y);
 
+  // ---- the week in one line
+  var feat = featuredStory();
+  if(feat && feat.headline){
+    y += 46;
+    x.fillStyle = P.gold; x.font = shareFont(22, 600, true);
+    x.fillText("THE STORY", pad, y);
+    y += 40;
+    x.fillStyle = P.text; x.font = shareFont(38, 600);
+    wrapLines(x, feat.headline, SHARE_W - pad*2, 2).forEach(function(ln){
+      x.fillText(ln, pad, y); y += 44;
+    });
+    y -= 34;
+  }
+
   // ---- scoreboard
   y += 54;
   x.fillStyle = P.line; x.fillRect(pad, y, SHARE_W - pad*2, 2);
@@ -1656,7 +1687,7 @@ function drawShareCard(){
   y += 26;
 
   var gs = games(wk);
-  var rowH = 78;
+  var rowH = 72;
   gs.slice(0, 6).forEach(function(g){
     x.fillStyle = P.panel;
     x.fillRect(pad, y, SHARE_W - pad*2, rowH - 10);
@@ -1701,14 +1732,14 @@ function drawShareCard(){
   //      ends with a slab of empty space
   var quote = pickShareQuote();
   if(quote){
-    x.font = shareFont(30, 400);
+    x.font = shareFont(27, 400);
     var lines = wrapLines(x, quote.text, SHARE_W - pad*2, 4);
-    var blockH = lines.length * 42 + 46;
+    var blockH = lines.length * 38 + 46;
     var qy = SHARE_H - 76 - 40 - blockH;
     if(qy < y + 20) qy = y + 20;           // never collide with the rankings
     x.fillStyle = P.line; x.fillRect(pad, qy - 46, SHARE_W - pad*2, 2);
     x.fillStyle = P.text;
-    lines.forEach(function(ln){ x.fillText(ln, pad, qy); qy += 42; });
+    lines.forEach(function(ln){ x.fillText(ln, pad, qy); qy += 38; });
     qy += 8;
     x.fillStyle = P.gold; x.font = shareFont(26, 600, true);
     x.fillText("\u2014 " + quote.who, pad, qy);
