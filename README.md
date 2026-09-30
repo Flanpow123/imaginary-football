@@ -55,6 +55,25 @@ visitors see no sign a human is involved.
 - **The briefing lists the desk.** A `THE DESK` section names every analyst key and persona,
   so the first edition knows the cast before any archive exists.
 
+## Two kinds of story
+
+The Newsroom is for what happened in the games. **Petty Cash** is for what people paid, and it
+replaced the old Moves tab rather than sitting beside it.
+
+A story routes itself. Give it `"section": "wire"` in `news.json` and it renders on Petty Cash;
+leave the key off and it stays in the Newsroom. The share card only ever leads with a Newsroom
+story, so a waiver receipt can never end up as the week's headline by accident.
+
+Petty Cash also computes **the ledger** with no writing involved: every winning bid, what it cost,
+and what the player has produced *for the team that paid*. Two columns matter — **Started** is the
+part that counted, **Total** includes bench scoring, and the gap between them is usually the story.
+A player scoring 20 a week on somebody's bench has not been bought, he has been stored. Underneath
+it the page names the week's Steal (a $0–$1 claim that produced) and its Reach (a bid of $5 or more
+that did not).
+
+Then the FAAB budgets, the full move feed, and "the one that got away" — every losing bid and what
+that player has scored since.
+
 ## The share card
 
 `?desk` reveals a **Share this week** button that draws the week onto a 1080x1350 PNG and hands it
